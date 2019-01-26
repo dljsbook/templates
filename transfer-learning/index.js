@@ -4,4 +4,3 @@ import { MobileNet } from "@dljsbook/models"
 tf.loadModel(MobileNet.url).then(mobilenet => {
   mobilenet.summary()
 });
-

@@ -4,4 +4,3 @@ import { ImageNet } from "@dljsbook/data";
 const imageNet = new ImageNet();
 
 imageNet.getImage().then(data => data.print());
-
