@@ -1,7 +1,7 @@
 {
-  "name": "mnist",
+  "name": "Transfer Learning",
   "version": "0.7.0",
-  "description": "MNIST | Deep Learning With Javascript",
+  "description": "Transfer Learning | Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
   "license": "MIT",
   "dependencies": {

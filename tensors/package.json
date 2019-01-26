@@ -1,7 +1,7 @@
 {
-  "name": "data",
+  "name": "Tensors",
   "version": "0.7.0",
-  "description": "Data | Deep Learning With Javascript",
+  "description": "Tensors | Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
   "license": "MIT",
   "dependencies": {

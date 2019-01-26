@@ -1,5 +1,5 @@
 {
-  "name": "mnist",
+  "name": "MNIST",
   "version": "0.7.0",
   "description": "MNIST | Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
