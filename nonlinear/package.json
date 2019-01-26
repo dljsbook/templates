@@ -1,7 +1,7 @@
 {
-  "name": "line",
+  "name": "nonlinear",
   "version": "0.7.0",
-  "description": "Line | Deep Learning With Javascript",
+  "description": "Nonlinear | Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
   "license": "MIT",
   "dependencies": {

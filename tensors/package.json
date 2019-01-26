@@ -1,7 +1,7 @@
 {
-  "name": "line",
+  "name": "data",
   "version": "0.7.0",
-  "description": "Line | Deep Learning With Javascript",
+  "description": "Data | Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
   "license": "MIT",
   "dependencies": {
