@@ -1,0 +1,11 @@
+{
+  "name": "inference",
+  "version": "0.7.0",
+  "description": "Inference | Deep Learning With Javascript",
+  "author": "Kevin Scott <kevin@dljsbook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@dljsbook/data": "^0.7.6",
+    "@tensorflow/tfjs": "^0.14.2"
+  }
+}
