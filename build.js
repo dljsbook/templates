@@ -48,9 +48,11 @@ fs.readdir(src, async (err, dirs) => {
       // 3. copy JSON file and manipulate it
       const defaultJSON = JSON.parse(fs.readFileSync('./assets/package.json'));
       const dirJSON = JSON.parse(fs.readFileSync(`${src}/package.json`));
+      const rootJSON = JSON.parse(fs.readFileSync(`./package.json`));
       const targetJSON = {
         ...defaultJSON,
         ...dirJSON,
+        version: rootJSON.version,
       };
       fs.writeFileSync(`${target}/package.json`, JSON.stringify(targetJSON, null, 2), 'utf8');
 
