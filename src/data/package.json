@@ -1,9 +1,6 @@
 {
   "name": "Data",
-  "version": "0.7.0",
   "description": "Data | Chapter 3 | Deep Learning With Javascript",
-  "author": "Kevin Scott <kevin@dljsbook.com>",
-  "license": "MIT",
   "dependencies": {
     "@tensorflow/tfjs": "^0.14.2"
   }
