@@ -1,7 +1,7 @@
 {
   "name": "Inference",
   "version": "0.7.0",
-  "description": "Inference | Deep Learning With Javascript",
+  "description": "Inference | Chapter 2 | Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
   "license": "MIT",
   "template": "parcel",

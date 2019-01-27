@@ -1,7 +1,7 @@
 {
   "name": "MNIST",
   "version": "0.7.0",
-  "description": "MNIST | Deep Learning With Javascript",
+  "description": "MNIST | Chapter 7 | Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
   "license": "MIT",
   "dependencies": {

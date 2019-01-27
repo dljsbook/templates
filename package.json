@@ -1,0 +1,23 @@
+{
+  "name": "templates",
+  "version": "0.7.0",
+  "scripts": {
+    "build": "node build.js",
+    "deploy": "yarn build && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dljsbook/templates.git"
+  },
+  "author": "Kevin Scott <kevin@dljsbook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/dljsbook/templates",
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.3"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  }
+}

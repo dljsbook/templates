@@ -1,7 +1,7 @@
 {
   "name": "Transfer Learning",
   "version": "0.7.0",
-  "description": "Transfer Learning | Deep Learning With Javascript",
+  "description": "Transfer Learning | Chapter 7 Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
   "license": "MIT",
   "dependencies": {

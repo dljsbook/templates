@@ -1,7 +1,7 @@
 {
   "name": "Tensors",
   "version": "0.7.0",
-  "description": "Tensors | Deep Learning With Javascript",
+  "description": "Tensors | Chapter 3 | Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
   "license": "MIT",
   "dependencies": {

@@ -1,7 +1,7 @@
 {
   "name": "Image Classification",
   "version": "0.7.0",
-  "description": "Image Classification | Deep Learning With Javascript",
+  "description": "Image Classification | Chapter 9 | Deep Learning With Javascript",
   "author": "Kevin Scott <kevin@dljsbook.com>",
   "license": "MIT",
   "template": "parcel",
