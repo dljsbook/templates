@@ -2,8 +2,7 @@
   "name": "templates",
   "version": "0.7.1",
   "scripts": {
-    "build": "node build.js",
-    "deploy": "yarn build && gh-pages -d dist"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
 const cheerio = require('cheerio');
+const ghpages = require('gh-pages');
 const rimrafOrig = require('rimraf');
 const rimraf = (path) => new Promise((resolve, reject) => {
   rimrafOrig(path, err => {
@@ -35,8 +36,6 @@ fs.readdir(src, async (err, dirs) => {
       const dir = dirs[i];
       const src = `./src/${dir}`;
       const target = `./dist/${dir}`;
-
-      console.log('target', target);
 
       // 1. create directory
       await rimraf(target);
@@ -72,8 +71,20 @@ fs.readdir(src, async (err, dirs) => {
       jsFiles.forEach(file => {
         fs.createReadStream(`${src}/${file}`).pipe(fs.createWriteStream(`${target}/${file}`));
       });
+
+      ghpages.publish('dist', {
+        branch: 'dist',
+      });
+
+      // 6. copy sandbox config
+      copyFile('./assets/sandbox.config.json', `${target}/sandbox.config.json`);
     }
   } catch(err) {
     console.error(err);
   }
 });
+
+const copyFile = (source, target) => {
+  const config = fs.readFileSync(source, 'utf8');
+  fs.writeFileSync(target, config, 'utf8');
+}
