@@ -60,6 +60,14 @@ const buildDir = async (dir) => {
   const targetJSON = {
     ...defaultJSON,
     ...dirJSON,
+    dependencies: {
+      ...defaultJSON.dependencies,
+      ...dirJSON.dependencies,
+    },
+    devDependencies: {
+      ...defaultJSON.devDependencies,
+      ...dirJSON.devDependencies,
+    },
     version: rootJSON.version,
   };
   fs.writeFileSync(`${target}/package.json`, JSON.stringify(targetJSON, null, 2), 'utf8');

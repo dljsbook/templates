@@ -12,11 +12,9 @@
   "license": "MIT",
   "homepage": "https://github.com/dljsbook/templates",
   "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "gh-pages": "^2.0.1",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.3"
-  },
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.2"
   }
 }

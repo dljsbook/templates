@@ -1,7 +1,4 @@
 {
   "name": "Data",
-  "description": "Data | Chapter 3 | Deep Learning With Javascript",
-  "dependencies": {
-    "@tensorflow/tfjs": "^0.14.2"
-  }
+  "description": "Data | Chapter 3 | Deep Learning With Javascript"
 }
