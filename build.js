@@ -5,6 +5,7 @@ const mkdirp = require('mkdirp');
 const cheerio = require('cheerio');
 const ghpages = require('gh-pages');
 const rimrafOrig = require('rimraf');
+
 const rimraf = (path) => new Promise((resolve, reject) => {
   rimrafOrig(path, err => {
     if (err) {
@@ -13,8 +14,6 @@ const rimraf = (path) => new Promise((resolve, reject) => {
     resolve();
   });
 });
-
-const src = path.resolve('./src');
 
 const getJSFiles = src => {
   const files = fs.readdirSync(src);
@@ -42,9 +41,9 @@ const makeDir = dir => new Promise((resolve, reject) => mkdirp(dir, (err) => {
   return resolve();
 }));
 
-const buildDir = async (dir) => {
+const buildDir = async (dir, dist) => {
   const src = `./src/${dir}`;
-  const target = `./dist/${dir}`;
+  const target = `${dist}/${dir}`;
 
   // 1. create directory
   await rimraf(target);
@@ -93,19 +92,17 @@ const buildDir = async (dir) => {
   copyFile('./assets/sandbox.config.json', `${target}/sandbox.config.json`);
 }
 
-const buildDirs = async (dirs) => {
-  await rimraf('./dist');
-  await makeDir('./dist');
+const buildDirs = async (dirs, dist) => {
+  await rimraf(dist);
+  await makeDir(dist);
   for (let i = 0; i < dirs.length; i++) {
-    console.log(dirs[i]);
-    await buildDir(dirs[i]);
+    await buildDir(dirs[i], dist);
   }
 }
-
-const prepareBuild = () => new Promise((resolve, reject) => {
+const prepareBuild = (src, dist) => new Promise((resolve, reject) => {
   fs.readdir(src, async (err, dirs) => {
     try {
-      await buildDirs(dirs);
+      await buildDirs(dirs, dist);
     } catch(err) {
       console.error(err);
       return reject(err);
@@ -114,11 +111,14 @@ const prepareBuild = () => new Promise((resolve, reject) => {
   });
 });
 
+const SRC_DIRECTORY = path.resolve('./src');
+const DIST_DIRECTORY = path.resolve('./dist');
+
 (async () => {
-  await prepareBuild();
-  ghpages.publish('dist', {
+  await prepareBuild(SRC_DIRECTORY, DIST_DIRECTORY);
+  ghpages.publish(DIST_DIRECTORY, {
     branch: 'dist',
   });
-  await rimraf('dist');
+  await rimraf(DIST_DIRECTORY);
 })();
 
