@@ -4,7 +4,6 @@
     "type": "git",
     "url": "git+https://github.com/dljsbook/templates.git"
   },
-  "template": "parcel",
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
   "name": "Line",
