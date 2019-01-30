@@ -119,5 +119,6 @@ const prepareBuild = () => new Promise((resolve, reject) => {
   ghpages.publish('dist', {
     branch: 'dist',
   });
+  await rimraf('dist');
 })();
 
