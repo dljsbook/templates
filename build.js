@@ -111,14 +111,25 @@ const prepareBuild = (src, dist) => new Promise((resolve, reject) => {
   });
 });
 
+const publish = (dist, branch) => new Promise((resolve, reject) => {
+  ghpages.publish(DIST_DIRECTORY, {
+    branch,
+  }, (err) => {
+    if (err) {
+      return reject(err);
+    }
+
+    return resolve();
+  });
+});
+
 const SRC_DIRECTORY = path.resolve('./src');
 const DIST_DIRECTORY = path.resolve('./dist');
+const BRANCH = 'dist';
 
 (async () => {
   await prepareBuild(SRC_DIRECTORY, DIST_DIRECTORY);
-  ghpages.publish(DIST_DIRECTORY, {
-    branch: 'dist',
-  });
+  await publish(DIST_DIRECTORY, BRANCH);
   await rimraf(DIST_DIRECTORY);
 })();
 
