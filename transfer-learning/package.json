@@ -12,5 +12,6 @@
     "@dljsbook/models": "^0.7.6",
     "@tensorflow/tfjs": "^0.14.2"
   },
+  "devDependencies": {},
   "version": "0.7.1"
 }

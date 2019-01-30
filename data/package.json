@@ -11,5 +11,6 @@
   "dependencies": {
     "@tensorflow/tfjs": "^0.14.2"
   },
+  "devDependencies": {},
   "version": "0.7.1"
 }

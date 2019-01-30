@@ -10,7 +10,9 @@
   "description": "Inference | Chapter 2 | Deep Learning With Javascript",
   "dependencies": {
     "@dljsbook/data": "^0.7.6",
-    "@tensorflow/tfjs": "^0.14.2"
+    "@tensorflow/tfjs": "^0.14.2",
+    "@tensorflow/tfjs-vis": "^0.4.2"
   },
+  "devDependencies": {},
   "version": "0.7.1"
 }
