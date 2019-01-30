@@ -34,13 +34,21 @@ const copyFile = (source, target) => {
   fs.writeFileSync(target, config, 'utf8');
 }
 
+const makeDir = dir => new Promise((resolve, reject) => mkdirp(dir, (err) => {
+  if (err) {
+    return reject(err);
+  }
+
+  return resolve();
+}));
+
 const buildDir = async (dir) => {
   const src = `./src/${dir}`;
   const target = `./dist/${dir}`;
 
   // 1. create directory
   await rimraf(target);
-  mkdirp(target);
+  await makeDir(target);
 
   // 2. copy prettier file
   fs.createReadStream('./assets/.prettierrc').pipe(fs.createWriteStream(`${target}/.prettierrc`));
@@ -78,7 +86,8 @@ const buildDir = async (dir) => {
 }
 
 const buildDirs = async (dirs) => {
-  mkdirp('./dist');
+  await rimraf('./dist');
+  await makeDir('./dist');
   for (let i = 0; i < dirs.length; i++) {
     console.log(dirs[i]);
     await buildDir(dirs[i]);
@@ -93,7 +102,6 @@ const prepareBuild = () => new Promise((resolve, reject) => {
       console.error(err);
       return reject(err);
     }
-    console.log('good');
     return resolve();
   });
 });
