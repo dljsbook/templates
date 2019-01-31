@@ -7,7 +7,7 @@
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
   "dependencies": {
-    "@dljsbook/data": "^0.8.6"
+    "@dljsbook/data": "^0.8.7"
   },
   "name": "Structured",
   "description": "Structured | Chapter 6 | Deep Learning With Javascript",
