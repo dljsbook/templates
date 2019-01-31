@@ -43,6 +43,7 @@ const makeDir = dir => new Promise((resolve, reject) => mkdirp(dir, (err) => {
 
 const latestDeps = JSON.parse(fs.readFileSync('./assets/dljsPackages.json'));
 const getLatestDeps = (deps = {}) => {
+  console.log(deps, latestDeps);
   return Object.entries(deps).reduce((obj, [key, val]) => {
     if (latestDeps[key]) {
       return {
@@ -58,21 +59,11 @@ const getLatestDeps = (deps = {}) => {
   }, {});
 };
 
-const buildDir = async (dir, dist) => {
-  const src = `./src/${dir}`;
-  const target = `${dist}/${dir}`;
-
-  // 1. create directory
-  await rimraf(target);
-  await makeDir(target);
-
-  // 2. copy prettier file
-  fs.createReadStream('./assets/.prettierrc').pipe(fs.createWriteStream(`${target}/.prettierrc`));
-
-  // 3. copy JSON file and manipulate it
+const buildJSON = (src) => {
   const defaultJSON = JSON.parse(fs.readFileSync('./assets/package.json'));
   const dirJSON = JSON.parse(fs.readFileSync(`${src}/package.json`));
   const rootJSON = JSON.parse(fs.readFileSync(`./package.json`));
+  console.log(getLatestDeps(dirJSON.dependencies));
   const targetJSON = {
     ...defaultJSON,
     ...dirJSON,
@@ -86,6 +77,23 @@ const buildDir = async (dir, dist) => {
     },
     version: rootJSON.version,
   };
+
+  return targetJSON;
+};
+
+const buildDir = async (dir, dist) => {
+  const src = `./src/${dir}`;
+  const target = `${dist}/${dir}`;
+
+  // 1. create directory
+  await rimraf(target);
+  await makeDir(target);
+
+  // 2. copy prettier file
+  fs.createReadStream('./assets/.prettierrc').pipe(fs.createWriteStream(`${target}/.prettierrc`));
+
+  // 3. copy JSON file and manipulate it
+  const targetJSON = buildJSON(src);
   fs.writeFileSync(`${target}/package.json`, JSON.stringify(targetJSON, null, 2), 'utf8');
 
   // 4. copy HTML file
