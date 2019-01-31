@@ -7,7 +7,6 @@
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
   "dependencies": {
-    "@tensorflow/tfjs": "^0.14.2",
-    "@tensorflow/tfjs-vis": "^0.4.2"
+    "@tensorflow/tfjs": "^0.14.2"
   }
 }
