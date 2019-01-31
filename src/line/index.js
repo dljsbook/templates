@@ -1,4 +1,4 @@
-import { Line } from "@dljsbook/data"
+const { Line } = dljsbookData
 
 const line = new Line()
 
