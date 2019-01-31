@@ -7,7 +7,7 @@
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
   "dependencies": {
-    "@dljsbook/data": "^0.8.5",
+    "@dljsbook/data": "^0.8.6",
     "@dljsbook/models": "^0.7.6"
   },
   "name": "Image Classification",
