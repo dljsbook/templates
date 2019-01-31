@@ -1,4 +1,4 @@
-const { Line } = dljsbookData
+const { Line } = dljsData
 
 const line = new Line()
 
