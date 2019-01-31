@@ -2,6 +2,6 @@
   "name": "Transfer Learning",
   "description": "Transfer Learning | Chapter 7 Deep Learning With Javascript",
   "dependencies": {
-    "@dljsbook/models": "^0.7.6"
+    "@dljsbook/models": "any"
   }
 }
