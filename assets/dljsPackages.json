@@ -1,3 +1,4 @@
 {
-  "@dljsbook/data": "^0.8.2"
+  "@dljsbook/data": "^0.8.4",
+  "@dljsbook/models": "^0.7.6"
 }
