@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@tensorflow/tfjs": "^0.14.2",
-    "@dljsbook/data": "^0.8.3"
+    "@dljsbook/data": "^0.8.4"
   },
   "name": "Tensors",
   "description": "Tensors | Chapter 3 | Deep Learning With Javascript",
