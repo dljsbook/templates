@@ -6,9 +6,7 @@
   },
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
-  "dependencies": {
-    "@dljsbook/data": "^0.8.7"
-  },
+  "dependencies": {},
   "name": "Nonlinear",
   "description": "Nonlinear | Chapter 6 | Deep Learning With Javascript",
   "devDependencies": {},
