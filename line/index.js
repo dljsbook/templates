@@ -1,4 +1,4 @@
-import { Line } from "@dljsbook/data"
+const { Line } = require('@dljsbook/data');
 
 const line = new Line()
 
