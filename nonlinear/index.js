@@ -1,3 +1,3 @@
-const { Moons, MOONS_POLARITY } = dljsbookData
+const { Moons, MOONS_POLARITY } = dljsData
 const moons = new Moons()
 moons.get().print()
