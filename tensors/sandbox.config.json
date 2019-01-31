@@ -1,5 +1,5 @@
 {
-  "template": "vanilla",
+  "template": "static",
   "infiniteLoopProtection": true,
   "hardReloadOnChange": true
 }
