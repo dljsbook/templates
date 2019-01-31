@@ -1,5 +1,5 @@
 {
-  "template": "create-react-app",
+  "template": "parcel",
   "infiniteLoopProtection": true,
   "hardReloadOnChange": true
 }
