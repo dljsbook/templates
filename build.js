@@ -41,6 +41,23 @@ const makeDir = dir => new Promise((resolve, reject) => mkdirp(dir, (err) => {
   return resolve();
 }));
 
+const latestDeps = JSON.parse(fs.readFileSync('./assets/dljsPackages.json'));
+const getLatestDeps = (deps = {}) => {
+  return Object.entries(deps).reduce((obj, [key, val]) => {
+    if (latestDeps[key]) {
+      return {
+        ...obj,
+        [key]: latestDeps[key],
+      };
+    }
+
+    return {
+      ...obj,
+      [key]: val,
+    };
+  }, {});
+};
+
 const buildDir = async (dir, dist) => {
   const src = `./src/${dir}`;
   const target = `${dist}/${dir}`;
@@ -61,11 +78,11 @@ const buildDir = async (dir, dist) => {
     ...dirJSON,
     dependencies: {
       ...defaultJSON.dependencies,
-      ...dirJSON.dependencies,
+      ...getLatestDeps(dirJSON.dependencies),
     },
     devDependencies: {
       ...defaultJSON.devDependencies,
-      ...dirJSON.devDependencies,
+      ...getLatestDeps(dirJSON.devDependencies),
     },
     version: rootJSON.version,
   };
