@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@tensorflow/tfjs": "^0.14.2",
-    "@dljsbook/data": "^0.8.0",
+    "@dljsbook/data": "^0.8.1",
     "@dljsbook/models": "^0.7.6"
   },
   "name": "Image Classification",

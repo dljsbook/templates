@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@tensorflow/tfjs": "^0.14.2",
-    "@dljsbook/data": "^0.8.0"
+    "@dljsbook/data": "^0.8.1"
   },
   "name": "Nonlinear",
   "description": "Nonlinear | Chapter 6 | Deep Learning With Javascript",
