@@ -6,9 +6,7 @@
   },
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
-  "dependencies": {
-    "@tensorflow/tfjs": "^0.14.2"
-  },
+  "dependencies": {},
   "name": "Data",
   "description": "Data | Chapter 3 | Deep Learning With Javascript",
   "devDependencies": {},
