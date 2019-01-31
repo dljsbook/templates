@@ -1,4 +1,4 @@
-const { Line } = require('@dljsbook/data');
+const { Line } = dljsbookData
 
 const line = new Line()
 
