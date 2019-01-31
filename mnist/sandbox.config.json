@@ -1,3 +1,5 @@
 {
-  "template": "parcel"
+  "template": "parcel",
+  "infiniteLoopProtection": true,
+  "hardReloadOnChange": true
 }

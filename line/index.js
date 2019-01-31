@@ -1,4 +1,3 @@
-import * as tfvis from "@tensorflow/tfjs-vis"
 import { Line } from "@dljsbook/data"
 
 const line = new Line()

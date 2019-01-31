@@ -8,8 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@tensorflow/tfjs": "^0.14.2",
-    "@tensorflow/tfjs-vis": "^0.4.2",
-    "@dljsbook/data": "^0.7.6"
+    "@dljsbook/data": "^0.8.0"
   },
   "name": "MNIST",
   "description": "MNIST | Chapter 7 | Deep Learning With Javascript",
