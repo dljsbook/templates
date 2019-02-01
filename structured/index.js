@@ -1,5 +1,4 @@
-import * as tfvis from "@tensorflow/tfjs-vis"
-import { BostonHousing } from "@dljsbook/data"
+const { BostonHousing } = dljsData
 const house = new BostonHousing()
 house.ready(() => {
   const {
@@ -7,5 +6,6 @@ house.ready(() => {
     labels,
     print
   } = house.get("train")
+
   print()
 })
