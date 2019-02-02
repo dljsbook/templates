@@ -7,7 +7,7 @@
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
   "dependencies": {
-    "@dljsbook/data": "^0.8.9"
+    "@dljsbook/data": "^0.8.11"
   },
   "name": "MNIST",
   "description": "MNIST | Chapter 7 | Deep Learning With Javascript",
