@@ -1,8 +1,9 @@
-import * as tf from "@tensorflow/tfjs"
-import * as tfvis from "@tensorflow/tfjs-vis"
-import { ImageNet } from "@dljsbook/data"
-import { MobileNet } from "@dljsbook/models"
+const { ImageClassifier } = dljsUI
+const { Animals } = dljsData
 
-tf.loadModel(MobileNet.url).then(mobilenet => {
-  mobilenet.summary()
+const imageClassifier = new ImageClassifier(document.body)
+
+const animals = new Animals()
+
+animals.ready(() => {
 })
