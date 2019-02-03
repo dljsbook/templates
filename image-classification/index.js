@@ -1,2 +1,4 @@
-const { ImageNet } = dljsData
-const { MobileNet } = dljsModels
+const { ImageClassifier } = dljsUI
+
+const imageClassifier = new ImageClassifier(document.body)
+imageClassifier.render(document.body)
