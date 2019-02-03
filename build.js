@@ -154,6 +154,5 @@ const BRANCH = 'dist';
 (async () => {
   await prepareBuild(SRC_DIRECTORY, DIST_DIRECTORY);
   await publish(DIST_DIRECTORY, BRANCH);
-  // await rimraf(DIST_DIRECTORY);
+  await rimraf(DIST_DIRECTORY);
 })();
-
