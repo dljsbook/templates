@@ -137,6 +137,7 @@ const prepareBuild = (src, dist) => new Promise((resolve, reject) => {
 const publish = (dist, branch) => new Promise((resolve, reject) => {
   ghpages.publish(DIST_DIRECTORY, {
     branch,
+    dotfiles: true,
   }, (err) => {
     if (err) {
       return reject(err);
@@ -153,6 +154,6 @@ const BRANCH = 'dist';
 (async () => {
   await prepareBuild(SRC_DIRECTORY, DIST_DIRECTORY);
   await publish(DIST_DIRECTORY, BRANCH);
-  await rimraf(DIST_DIRECTORY);
+  // await rimraf(DIST_DIRECTORY);
 })();
 
