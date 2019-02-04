@@ -6,10 +6,7 @@
   },
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
-  "dependencies": {
-    "@dljsbook/data": "^0.8.11",
-    "@dljsbook/models": "^0.7.6"
-  },
+  "dependencies": {},
   "name": "Image Classification",
   "description": "Image Classification | Chapter 9 | Deep Learning With Javascript",
   "devDependencies": {},
