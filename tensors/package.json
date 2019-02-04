@@ -6,9 +6,7 @@
   },
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
-  "dependencies": {
-    "@dljsbook/data": "^0.8.11"
-  },
+  "dependencies": {},
   "name": "Tensors",
   "description": "Tensors | Chapter 3 | Deep Learning With Javascript",
   "devDependencies": {},

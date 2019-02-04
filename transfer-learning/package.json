@@ -6,9 +6,7 @@
   },
   "homepage": "https://github.com/dljsbook/templates",
   "license": "MIT",
-  "dependencies": {
-    "@dljsbook/models": "^0.7.6"
-  },
+  "dependencies": {},
   "name": "Transfer Learning",
   "description": "Transfer Learning | Chapter 7 Deep Learning With Javascript",
   "devDependencies": {},
