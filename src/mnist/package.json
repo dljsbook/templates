@@ -2,6 +2,5 @@
   "name": "MNIST",
   "description": "MNIST | Chapter 7 | Deep Learning With Javascript",
   "dependencies": {
-    "@dljsbook/data": "any"
   }
 }

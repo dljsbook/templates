@@ -1,4 +1,6 @@
 {
   "name": "Image Classification",
-  "description": "Image Classification | Chapter 9 | Deep Learning With Javascript"
+  "description": "Image Classification | Chapter 9 | Deep Learning With Javascript",
+  "dependencies": {
+  }
 }

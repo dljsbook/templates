@@ -2,6 +2,5 @@
   "name": "Tensors",
   "description": "Tensors | Chapter 3 | Deep Learning With Javascript",
   "dependencies": {
-    "@dljsbook/data": "any"
   }
 }
