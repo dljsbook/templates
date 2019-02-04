@@ -1,8 +1,4 @@
 {
   "name": "Image Classification",
-  "description": "Image Classification | Chapter 9 | Deep Learning With Javascript",
-  "dependencies": {
-    "@dljsbook/data": "any",
-    "@dljsbook/models": "any"
-  }
+  "description": "Image Classification | Chapter 9 | Deep Learning With Javascript"
 }
